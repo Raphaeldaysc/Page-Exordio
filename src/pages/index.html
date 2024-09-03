@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exordio - Editora de Livros</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="@src/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="40" height="40" rx="20" fill="#FF6B6B" />
+            <path d="M10 20L20 10L30 20L20 30L10 20Z" fill="#FFFFFF" />
+            <circle cx="20" cy="20" r="5" fill="#4ECDC4" />
+          </svg>
+          Exordio
+        </div>
+        <ul>
+          <li>
+            <a href="#home"><i class="fas fa-home"></i> Início</a>
+          </li>
+          <li>
+            <a href="#authors"><i class="fas fa-users"></i> Autores</a>
+          </li>
+          <li>
+            <a href="#catalog"><i class="fas fa-book"></i> Catálogo</a>
+          </li>
+          <li>
+            <a href="#submit"
+              ><i class="fas fa-pen-fancy"></i> Envie seu Manuscrito</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Descubra Mundos Incríveis com a Exordio</h1>
+          <p>Histórias que vão te fazer viajar sem sair do lugar</p>
+          <a href="#catalog" class="cta-button">Explore Nosso Universo</a>
+        </div>
+        <div class="hero-image">
+          <div class="book-stack">
+            <img src="../assets/book1.png" alt="Livro 1" class="book book1" />
+            <img src="../assets/book1.png" alt="Livro 2" class="book book2" />
+            <img src="../assets/book1.png" alt="Livro 3" class="book book3" />
+          </div>
+        </div>
+      </section>
+
+      <section id="authors" class="container">
+        <h2>Autores em Alta</h2>
+        <div class="author-grid">
+          <div class="author-card">
+            <svg
+              class="author-image"
+              width="150"
+              height="150"
+              viewBox="0 0 150 150"
+            >
+              <circle cx="75" cy="75" r="70" fill="#FF6B6B" />
+              <circle cx="75" cy="60" r="30" fill="#1A1A1A" />
+              <path
+                d="M75 100 Q 110 100 120 130 H30 Q 40 100 75 100"
+                fill="#1A1A1A"
+              />
+              <circle
+                cx="75"
+                cy="75"
+                r="72"
+                fill="none"
+                stroke="#4ECDC4"
+                stroke-width="5"
+              />
+            </svg>
+            <h3>Maria Silva</h3>
+            <p>Autora de "Sonhos de Verão"</p>
+          </div>
+          <div class="author-card">
+            <svg
+              class="author-image"
+              width="150"
+              height="150"
+              viewBox="0 0 150 150"
+            >
+              <circle cx="75" cy="75" r="70" fill="#4ECDC4" />
+              <circle cx="75" cy="60" r="30" fill="#1A1A1A" />
+              <path
+                d="M75 100 Q 110 100 120 130 H30 Q 40 100 75 100"
+                fill="#1A1A1A"
+              />
+              <circle
+                cx="75"
+                cy="75"
+                r="72"
+                fill="none"
+                stroke="#FF6B6B"
+                stroke-width="5"
+              />
+            </svg>
+            <h3>João Santos</h3>
+            <p>Autor de "Mistérios da Noite"</p>
+          </div>
+          <div class="author-card">
+            <svg
+              class="author-image"
+              width="150"
+              height="150"
+              viewBox="0 0 150 150"
+            >
+              <circle cx="75" cy="75" r="70" fill="#FF8C94" />
+              <circle cx="75" cy="60" r="30" fill="#1A1A1A" />
+              <path
+                d="M75 100 Q 110 100 120 130 H30 Q 40 100 75 100"
+                fill="#1A1A1A"
+              />
+              <circle
+                cx="75"
+                cy="75"
+                r="72"
+                fill="none"
+                stroke="#4ECDC4"
+                stroke-width="5"
+              />
+            </svg>
+            <h3>Ana Oliveira</h3>
+            <p>Autora de "Além do Horizonte"</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="container">
+        <h2>Livros que Vão Mudar Sua Vida</h2>
+        <div class="book-grid">
+          <div class="book-card">
+            <svg
+              class="book-image"
+              width="120"
+              height="180"
+              viewBox="0 0 120 180"
+            >
+              <rect width="120" height="180" fill="#FF6B6B" />
+              <rect x="10" y="10" width="100" height="160" fill="#1A1A1A" />
+              <text
+                x="60"
+                y="100"
+                font-family="Arial"
+                font-size="14"
+                fill="#4ECDC4"
+                text-anchor="middle"
+              >
+                Sonhos de Verão
+              </text>
+            </svg>
+            <h3>Sonhos de Verão</h3>
+            <p>Maria Silva</p>
+          </div>
+          <div class="book-card">
+            <svg
+              class="book-image"
+              width="120"
+              height="180"
+              viewBox="0 0 120 180"
+            >
+              <rect width="120" height="180" fill="#4ECDC4" />
+              <rect x="10" y="10" width="100" height="160" fill="#1A1A1A" />
+              <text
+                x="60"
+                y="100"
+                font-family="Arial"
+                font-size="14"
+                fill="#FF6B6B"
+                text-anchor="middle"
+              >
+                Mistérios da Noite
+              </text>
+            </svg>
+            <h3>Mistérios da Noite</h3>
+            <p>João Santos</p>
+          </div>
+          <div class="book-card">
+            <svg
+              class="book-image"
+              width="120"
+              height="180"
+              viewBox="0 0 120 180"
+            >
+              <rect width="120" height="180" fill="#FF8C94" />
+              <rect x="10" y="10" width="100" height="160" fill="#1A1A1A" />
+              <text
+                x="60"
+                y="100"
+                font-family="Arial"
+                font-size="14"
+                fill="#4ECDC4"
+                text-anchor="middle"
+              >
+                Além do Horizonte
+              </text>
+            </svg>
+            <h3>Além do Horizonte</h3>
+            <p>Ana Oliveira</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="submit" class="container">
+        <h2>Tem uma História Incrível?</h2>
+        <p>
+          Compartilhe seu talento com o mundo! Envie seu manuscrito e faça parte
+          da nossa comunidade de autores.
+        </p>
+        <a href="#" class="cta-button">Comece Sua Jornada</a>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Sobre a Exordio</h3>
+          <p>
+            Somos uma editora dedicada a descobrir e publicar as melhores
+            histórias de autores talentosos do Brasil.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Rápidos</h3>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#authors">Autores</a></li>
+            <li><a href="#catalog">Catálogo</a></li>
+            <li><a href="#submit">Envie seu Manuscrito</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>Email: contato@exordio.com.br</p>
+          <p>Telefone: (11) 1234-5678</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2023 Exordio Editora. Todos os direitos reservados.</p>
+        <p>Exordio é uma empresa da FGenius Co.</p>
+      </div>
+    </footer>
+  </body>
+</html>

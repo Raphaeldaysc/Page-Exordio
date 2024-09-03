@@ -1,0 +1,468 @@
+:root {
+  --primary-color: #1A1A1A;
+  --secondary-color: #FF6B6B;
+  --text-color: #FFFFFF;
+  --background-color: #2A2A2A;
+  --accent-color: #4ECDC4;
+  --hover-color: #FF8C94;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0; /* Remove a margem padrão do body */
+  padding: 0; /* Remove o padding padrão do body */
+  overflow-x: hidden; /* Previne scroll horizontal */
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px; /* Reduz o padding vertical */
+}
+
+.hero {
+  min-height: calc(100vh - 80px); /* Ajusta a altura do hero */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0; /* Reduz o padding vertical do hero */
+  background: linear-gradient(135deg, var(--primary-color), var(--background-color));
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 0 2rem; /* Adiciona um pequeno padding interno */
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 107, 107, 0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(255, 107, 107, 0.3);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-stack {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.book {
+  position: absolute;
+  width: 180px;
+  height: 270px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.5s ease;
+  transform-origin: left center;
+  object-fit: cover;
+}
+
+.book1 {
+  transform: rotateY(-35deg) translateZ(20px);
+  z-index: 1;
+}
+
+.book2 {
+  transform: rotateY(-30deg) translateZ(40px);
+  z-index: 2;
+}
+
+.book3 {
+  transform: rotateY(-25deg) translateZ(60px);
+  z-index: 3;
+}
+
+.book-stack:hover .book {
+  transform: rotateY(-15deg);
+}
+
+.book-stack:hover .book1 {
+  transform: rotateY(-35deg) translateZ(30px);
+}
+
+.book-stack:hover .book2 {
+  transform: rotateY(-30deg) translateZ(60px);
+}
+
+.book-stack:hover .book3 {
+  transform: rotateY(-25deg) translateZ(90px);
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.author-grid, .book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.author-card, .book-card {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid var(--accent-color);
+}
+
+.author-card:hover, .book-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(78, 205, 196, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.author-image, .book-image {
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.author-card:hover .author-image, .book-card:hover .book-image {
+  transform: scale(1.1);
+}
+
+.author-card h3, .book-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.author-card p, .book-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+#submit {
+  background: linear-gradient(135deg, var(--primary-color), var(--background-color));
+  text-align: center;
+  padding: 3rem 2rem; /* Reduz o padding vertical */
+  border-radius: 15px;
+  margin-top: 1rem; /* Reduz o margin-top */
+}
+
+#submit p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 2rem 0;
+  margin-top: 0; /* Remove a margem superior do footer */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Usa toda a largura disponível */
+  padding: 0 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.footer-section h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--hover-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0; /* Reduz ainda mais o padding para telas menores */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 1rem; /* Reduz o padding interno para telas menores */
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .book-stack {
+    width: 200px;
+    height: 280px;
+  }
+
+  .book {
+    width: 140px;
+    height: 210px;
+  }
+
+  .container {
+    padding: 2rem 1rem; /* Reduz o padding para telas menores */
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  .author-grid, .book-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+#authors, #catalog, #submit {
+  background-color: #f9f9f9; /* Adicionado um fundo claro para alternar com as seções */
+}
+
+#authors {
+  background-color: var(--background-color);
+}
+
+.author-card {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid var(--accent-color);
+}
+
+.author-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(78, 205, 196, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.author-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.author-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+#catalog {
+  background-color: var(--background-color);
+}
+
+.book-card {
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(78, 205, 196, 0.2);
+  border-color: var(--secondary-color);
+}
+
+.book-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.book-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.book-card .cta-button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
